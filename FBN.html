@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+  <meta charset="utf-8">
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <!-- Link dan Script -->
+  <link rel="icon" type="img/jpg" href="img/roni kecil.jpg"/>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"/>
+  <script src="jquery-1.12.2.min.js"></script>
+	
+   <title>BOLA NEWS | Berita Bola Terakurat</title> 
+
+
+
+   <style type="text/css">
+   
+	* {
+		font-family: "Oswald" , sans-serif;
+	}
+	
+	body {
+		background: url(img/dddddaluz.jpg) fixed;
+	}
+	
+	.div-nav {
+		background-color: white;
+		margin-top: -16px;
+		margin-right: 10%;
+		margin-left: 10%;
+	}
+	
+	/* First Nav */
+	
+	.nav-biasa {
+		display: block; 	
+		background-color: #445b8b;
+	}
+	
+	.menu-biasa {
+		display: block;
+		padding: 0px 10px;
+		border-bottom: 3px solid #33cc99;
+	}
+	
+	.menu-biasa li {
+		display: inline-block;
+		text-align: left;
+	}
+	
+	.menu-biasa li:first-child {
+		margin-left: 0;
+	}
+	
+	.menu-biasa li a {
+		font-weight: 500;
+		text-decoration: none;
+		padding: 20px 10px;
+		display: block;
+		color: #ffffff;
+	}
+	
+	.menu-biasa li a:hover {
+		background-color: #33cc99;
+	}
+
+	.menu-biasa li:hover>ul {
+    	visibility: visible;
+    	opacity: 1;
+    	transform: translate(0,0);
+	}
+	
+	@media (min-width: 768px) and (max-width: 979px) {
+    .nav-biasa {
+        width: 768px;
+    }
+
+    .menu-biasa {
+        top: 37px;
+    }
+
+    .menu-biasa li a {
+        font-size: 12px;
+    }
+}
+
+	@media (max-width: 767px) {
+    .nav-biasa {
+        width: auto;
+        padding: 50px 20px;
+    }
+
+    .menu-biasa {
+        display: none;
+    }
+
+    .nav-biasa {
+        margin: 0;
+        background: none;
+    }
+
+    .menu-biasa li {
+        display: block;
+        margin: 0;
+    }
+
+    .menu-biasa li a {
+        background: #33cc99;
+        color: #445b8b;
+    }
+
+    .menu-biasa li a:hover,.menu-biasa li:hover>a {
+        background: #33cc99;
+        color: #fff;
+    }
+}
+
+	/* Second Nav */
+	
+	.sec-n {
+		clear: both;
+	}
+	
+	.nav-wrapped {
+		display: block;
+		background-color: #445b8b;
+	}
+	
+	.menu-wrapped {
+		display: block;
+		padding: 0px 10px;
+		border-bottom: 3px solid #33cc99;
+	}
+	
+	.menu-wrapped li {
+		display: inline-block;
+		position: relative;
+		z-index: 100;
+		text-align: left;
+	}
+	
+	.menu-wrapped li:first-child {
+		margin-left: 0;
+	}
+	
+	.menu-wrapped li a {
+		font-weight: 500px;
+		text-decoration: none;
+		padding: 20px 10px;
+		transition: all 0.2s ease-in-out 0s;
+		display: block;
+		color: #ffffff;
+	}
+	
+	.menu-wrapped li a:hover , .menu-wrapped li:hover > a {
+		color: #fff;
+		background-color: #33cc99;
+	}
+	
+	.menu-wrapped ul {
+		visibility: hidden;
+		position: absolute;
+		opacity: 0;
+		margin: 0;
+		padding: 0;
+		width: 150px;
+		left: 0px;
+		z-index: 99;
+		transform: translate(0,20px);
+		transition: all 0.2s ease-out;
+	}
+	
+	.menu-wrapped ul:after {
+		bottom: 100%;
+		left: 20%;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		border: solid transparent;
+		pointer-events: none;
+		border-color: rgba(255, 255, 255, 0);
+		border-bottom-color: #fff;
+		border-width: 6px;
+		margin-left: -6px;
+	}
+	
+	.menu-wrapped ul li {
+		display: block;
+		float: none;
+		background: none;
+	}
+	
+	.menu-wrapped ul li a {
+		font-weight: 500;
+		text-decoration: none;
+		display: block;
+		background: #ffffff;
+		color: #445b8b;
+	}
+	
+	.menu-wrapped ul li a:hover,.menu-wrapped ul li:hover>a {
+		background: #33cc99;
+		color: #ffffff;
+	}
+
+	.menu-wrapped li:hover>ul {
+		visibility: visible;
+		opacity: 1;
+		transform: translate(0,0);
+	}
+	
+	a.a-menu {
+		background-color: #33cc99;
+	}
+	
+	@media (min-width: 768px) and (max-width: 979px) {
+    .nav-wrapped {
+        width: 768px;
+    }
+
+    .menu-wrapped ul {
+        top: 37px;
+    }
+
+    .menu-wrapped li a {
+        font-size: 12px;
+    }
+
+    a.a-menu {
+        background-color: #33cc99;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-wrapped {
+        width: auto;
+        padding: 50px 20px;
+    }
+
+    .menu-wrapped {
+        display: none;
+    }
+
+    .a-menu {
+        display: block;
+        margin-top: 100px;
+    }
+
+    .nav-wrapped {
+        margin: 0;
+        background: none;
+    }
+
+    .menu-wrapped li {
+        display: block;
+        margin: 0;
+    }
+
+    .menu-wrapped li a {
+        background: #33cc99;
+        color: #445b8b;
+    }
+
+    .menu-wrapped li a:hover,.menu li:hover>a {
+        background: #33cc99;
+        color: #fff;
+    }
+
+    .menu-wrapped ul {
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: initial;
+    }
+
+    .menu-wrapped li:hover>ul {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        transform: initial;
+    }
+}
+	
+	/* Img Header */
+	.hoax {
+		padding-left: 10px; 
+	}
+
+	.hoax h1 {
+		font-family: 'Franks' , sans-serif;
+	}
+
+	.hoax #haox img {
+		width: 64px;
+		height: 53px;
+		float: left;
+		padding-right: 7px;
+	}
+	
+	/* Bawah Nav */
+	.thi-n {
+		background-color: white;
+		width: 100%;
+		float: left;
+		margin-top: -16px;
+	}
+	
+	/* Post */
+	.fou-n {
+		border: 1px solid white;
+		background-color: white;
+		border-radius: 2px;
+		width: 768px;
+		float: left;
+	}
+	
+	.fou-n .post {
+		padding-left: 5px;
+		margin-top: 20px;
+		border-bottom: 1px solid #33cc99;
+	}
+
+	.fou-n .postitle a {
+		text-decoration: none;
+		color: black;
+		font-weight: 600;
+	}
+
+	.fou-n .thumb img {
+		width: 200px;
+		height: 100px;
+		float: left;
+		padding-right: 10px;
+	}
+
+	.fou-n .rightside {
+		text-align: justify;
+	}
+
+	.fou-n .author {
+		padding-top: 7px;
+	}
+	
+	/* Search Form */
+	.fif-n {
+		background-color: white;
+		float: right;
+		border: 1px solid white;
+		width: 250px;
+		top: 0;
+		border-radius: 2px;
+	}
+	.sform {
+		margin-top: 7px;
+		margin-right: 7px;
+	}
+	.sform input.sbox[type="text"] {
+		padding: 9px;
+		color: #95a5a6;
+		border: 1px solid #33cc99;
+		border-radius: 5px;
+		width: 180px;
+	}
+	
+	.sform input.sbutton[type="submit"] {
+		padding: 10px; 
+		width: 35px;
+		background: url(img/se1.jpg) #33cc99 no-repeat;
+		border: 0px solid #33cc99;
+		border-radius: 5px;
+	}
+	
+	/* Widget Sidebar */
+	.fif-n h3 {
+		border-bottom: 3px solid #33cc99;
+		font-size: 18px;
+		font-weight: 500;
+		font-family: "Arial" , sans-serif;
+	}
+	
+	.fif-n span {
+		background-color: #445b8b;
+		color: white;
+		padding: 1px;
+	}
+	
+	.fif-n ul {
+		display: block;
+		padding: 0px;
+		padding-top: 0px;
+	}
+	
+	.fif-n ul li {
+		list-style: none;
+		display: inline;
+		border-bottom: 1px dashed silver;
+		padding: 5px;
+		float: left;
+	}
+	
+	.fif-n ul li a {
+		text-decoration: none;
+		text-align: left;
+		font-size: 12px;
+		font-weight: bold;
+		color: black;
+	}
+	
+	.hesa img {
+		float: left;
+		padding: 7px;
+		padding-left: 0px;
+	}
+	
+
+	.sub-d {
+		float: left;
+		margin-bottom: 15px;
+	}
+
+	.sub-d ul {
+		margin-top: -16px;
+	}
+	
+	/* Footer */
+	.six-n {
+		float: left;
+		width: 100%;
+		height: 20%;
+		background-color: silver;
+	}
+	
+	
+	.six-n .ino ul {
+		text-align: right;
+		display: block;
+		padding: 0px 20px;
+	}
+	
+	.six-n .ino ul li {
+		text-align: right;
+		display: inline-block;
+	}
+	
+	.six-n .ino ul li a {
+		color: black;
+		padding: 0px 5px;
+		text-decoration: none;
+		border-left: 1px solid #22a7f0;
+	}
+	
+	.six-n .sec-ino {
+		background-color: white;
+		width: 100%;
+		height: 20%;
+		padding: 0;
+		clear: both;
+	}
+	
+	.six-n .sec-ino p {
+		padding: 10px;
+	}
+	
+	/* Slideshow */
+	#inislide {
+		position: relative;
+		overflow: hidden;
+		width: 765px;
+		height: 400px;
+	}
+
+	#inislide .capt {
+		position: absolute;
+		background-color: rgba(0,0,0,0.8) ;
+		bottom: 16px;
+		height: 70px;
+		padding: 10px;
+		left: 0;
+		right: 0;
+	}	
+
+	#inislide ul {
+		position: relative;
+		display: block;
+		padding: 0;
+		margin: 0;
+		height: 280px;
+		list-style-type: none;
+	}
+
+	#inislide ul li {
+		position: relative;
+		display: inline-block;
+		float: left;
+		padding: 0;
+		margin: 0;
+		width: 765px;
+		height: 400px;
+	}
+
+	#inislide .on a {
+		background-color: rgba(0,0,0,0.3);
+		border-radius: 70%;
+	}
+
+	#inislide ul li a {
+		text-decoration: none;
+		font-size: 18px;
+		color: white;
+		font-weight: 700;
+	}
+
+	#inislide ul li p {
+		color: white;
+	}
+
+	#inislide ul li a img {
+		width: 765px;
+		height: 384px;
+	}
+
+	a.control_prev, a.control_next {
+	  position: absolute;
+	  top: 40%;
+	  z-index: 999;
+	  display: block;
+	  padding: 4% 3%;
+	  width: auto;
+	  height: auto;
+	  background: #2a2a2a;
+	  color: #fff;
+	  text-decoration: none;
+	  font-weight: 600;
+	  font-size: 16px;
+	  opacity: 0.8;
+	  cursor: pointer;
+	}
+
+	a.control_prev:hover, a.control_next:hover {
+	  opacity: 1;
+	  -webkit-transition: all 0.2s ease;
+	}
+
+	a.control_prev {
+	  border-radius: 0 2px 2px 0;
+	}
+
+	a.control_next {
+	  right: 0;
+	  border-radius: 2px 0 0 2px;
+	}
+	
+   </style>
+  
+  </head>
+  <body>
+   <div class="div-nav">
+	<div class="fis-n">
+	 <nav class="nav-biasa">
+	  <ul class="menu-biasa">
+		<li><a href="About.html">About</a></li>
+		<li><a href="AContact.html">Contact</a></li>
+		<li><a href="ADisc.html">Disclaimer</a></li>
+		<li><a href="APriv.html">Privacy Policy</a></li>
+	  </ul>
+	 </nav>
+	</div>
+	 <div class="hoax">
+	 	<div id="haox"><img src="img/himage.jpg"/></div>
+		<div><h1>BOLA NEWS</h1></div>
+		<div style="margin-top: -16px;">Terakurat, Tercepat, dan Terpercaya</div>
+	 </div>	
+	<div class="sec-n">
+	 <nav class="nav-wrapped">
+	  <ul class="menu-wrapped">
+		<li><a class="a-menu" href="FBN.html"><i class="fa fa-soccer-ball-o" style="color: white; margin-right: 3px;"></i>Home</a></li>
+		<li><a href="newslokal.html">News Lokal</a></li>
+		<li><a href="newsdunia.html">News Dunia</a></li>
+		<li><a href="#">Tim Lokal</a>
+			<ul>
+			 <li><a href="TimArema.html">Arema Cronus</a></li>
+			 <li><a href="TimPersipura.html">Persipura Jayapura</a></li>
+			 <li><a href="TimPersib.html">Persib Bandung</a></li>
+			 <li><a href="TimPersebaya.html">Persebaya Surabaya</a></li>
+			 <li><a href="TimSriwijaya.html">Sriwijaya FC</a></li>
+			</ul>
+		</li>
+		<li><a href="Inggris.html">Inggris</a>
+			<ul>
+			 <li><a href="#">Arsenal</a></li>
+			 <li><a href="#">Chelsea</a></li>
+			 <li><a href="#">Liverpool</a></li>
+			 <li><a href="#">Manchester City</a></li>
+			 <li><a href="#">Manchester United</a></li>
+			</ul>
+		</li>
+		<li><a href="Italia.html">Italia</a>
+			<ul>
+			 <li><a href="#">AC Milan</a></li>
+			 <li><a href="#">AS Roma</a></li>
+			 <li><a href="#">Fiorentina</a></li>
+			 <li><a href="#">Internazionale</a></li>
+			 <li><a href="#">Juventus</a></li>
+			</ul>
+		</li>
+		<li><a href="Spanyol.html">Spanyol</a>
+			<ul>
+			 <li><a href="#">Atletico Madrid</a></li>
+			 <li><a href="#">FC Barcelona</a></li>
+			 <li><a href="#">Real Madrid</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Lainnya</a>
+			<ul>
+			 <li><a href="#">Corinthians</a></li>
+			 <li><a href="#">PSG</a></li>
+			 <li><a href="#">Ajax</a></li>
+			 <li><a href="#">Bayern Munich</a></li>
+			 <li><a href="#">Borussia Dortmund</a></li>
+			</ul>
+		</li>
+		</ul>
+	 </nav>
+	</div>
+   <div class="thi-n">
+	<div class="fou-n">
+	 <!-- Slideshow -->
+	<div style="border: 2px solid #33cc99; margin-top: 5px; margin-bottom: 5px; width: 765px; height: 384px;">
+		<div id="inislide">
+
+			<div class="on">
+			<a href="#" class="control_next">&gt;</a>
+			</div>
+			<div class="on">
+			<a href="#" class="control_prev">&lt;</a>
+			</div>
+			  
+			  <ul>
+			  	<li>
+			  	<a href="article2.html"><img src="img/conte.jpg"></a>
+			  	<div class="capt"><a href="article2.html">Conte Resmi ke Chelsea</a>
+			  	<div class="prevpost"><p><b>LONDON</b> - Antonio Conte akhirnya resmi duduk di kursi manajer Chelsea. Pelatih 46 tahun tersebut akan mulai menjabat sebagai manajer The Blues</p></div></div>
+			  	</li>
+			  	<li>
+			  	<a href="article3.html"><img src="img/ranieri.jpg"></a>
+			  	<div class="capt"><a href="article3.html">Leicester Semakin Kokoh di Puncak</a>
+			  	<div class="prevpost"><p><b>LEICESTER</b> - Kemenangan 1-0 melawan Southampton di King Power Stadium, Minggu (3/4/2016), membuat peluang Leicester City tampil sebagai.</p></div></div>
+			  	</li>
+			  	<li>
+			  	<a href="article1.html"><img src="img/1.jpg"></a>
+			  	<div class="capt"><a href="article1.html">Preview FA Cup : Hull City vs Arsenal</a>
+			  	<div class="prevpost"><p><b>HULL</b> - Arsenal punya catatan buruk jelang hadapi laga ulangan kontra Hull City di babak kelima Piala FA, Rabu (9/3/2016) dini hari WIB. Dalam lima </p></div></div>
+			  	</li>
+			  	<li>
+			  	<a href="article5.html"><img src="img/3.jpg"></a>
+			  	<div class="capt"><a href="article5.html">Drawing Quarter Final Liga Champions 2015/2016</a>
+			  	<div class="prevpost"><p><b>NYON</b> - Undian babak perempat final Liga Champions 2015/2016 sudah selesai digelar. Salah satu yang menyedot perhatian adalah Barcelona</p></div></div>
+			  	</li>
+			  	<li>
+			  	<a href="article4.html"><img src="img/2.jpg"></a>
+			  	<div class="capt"><a href="article4.html">Highlight Bhayangkara Cup : Sriwijaya FC vs PBFC</a>
+			  	<div class="prevpost"><p><b>BANDUNG</b> - Sriwijaya FC sukses menaklukkan Pusamania Borneo FC dengan skor 3-1 di laga kedua Piala Bhayangkara. Kemenangan itu membuat</p></div></div>
+			  	</li>
+			  </ul>
+
+		</div>	
+	</div>
+	<script src="jquery-1.12.2.min.js"></script>
+	<script type="text/javascript">
+	 jQuery(document).ready(function ($) {
+  
+	function do_slide(){
+    interval = setInterval(function(){
+      moveRight();
+    }, 3000);
+  	}
+  
+  	do_slide();
+   	$('ul li').hover(function(){
+       clearInterval(interval);
+     });
+      $('ul li').mouseleave(function(){
+       do_slide();
+     });
+  
+	var slideCount = $('#inislide ul li').length;
+	var slideWidth = $('#inislide ul li').width();
+	var slideHeight = $('#inislide ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+  
+	$('#inislide').css({ width: slideWidth, height: slideHeight });
+	
+	$('#inislide ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#inislide ul li:last-child').prependTo('#inislide ul');
+
+    function moveLeft() {
+        $('#inislide ul').animate({
+            left: + slideWidth
+        }, 700, function () {
+            $('#inislide ul li:last-child').prependTo('#inislide ul');
+            $('#inislide ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#inislide ul').animate({
+            left: - slideWidth
+        }, 700, function () {
+            $('#inislide ul li:first-child').appendTo('#inislide ul');
+            $('#inislide ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+	});
+	</script>
+	<!-- Post -->
+	 <div class="post">
+	 	<div class="thumb"><a href="article1.html"><img src="img/1.jpg"/></a></div>
+	 	<div class="rightside">
+	 	<div class="postitle"><a href="article1.html">Preview FA Cup : Hull City vs Arsenal</a></div>
+	 	<div class="author">By <span style="color: blue">Adam Fahmi K</span> on 12 April 2016</div>
+	 	<div class="posttext"><p><b>HULL</b> - Arsenal punya catatan buruk jelang hadapi laga ulangan kontra Hull City di babak kelima Piala FA, Rabu (9/3/2016) dini hari WIB. Dalam lima </p></div>
+	 	</div>
+	 </div>
+	 <div class="post">
+	 	<div class="thumb"><a href="article2.html"><img src="img/conte.jpg"/></a></div>
+	 	<div class="rightside">
+	 	<div class="postitle"><a href="article2.html">Conte Resmi Ke Chelsea</a></div>
+	 	<div class="author">By <span style="color: blue">Adam Fahmi K</span> on 13 April 2016</div>
+	 	<div class="posttext"><p><b>LONDON</b> - Antonio Conte akhirnya resmi duduk di kursi manajer Chelsea. Pelatih 46 tahun tersebut akan mulai menjabat sebagai manajer The Blues </p></div>
+	 	</div>
+	 </div>
+	 <div class="post">
+	 	<div class="thumb"><a href="article3.html"><img src="img/ranieri.jpg"/></a></div>
+	 	<div class="rightside">
+	 	<div class="postitle"><a href="article3.html">Leicester Semakin Kokoh di Puncak</a></div>
+	 	<div class="author">By <span style="color: blue">Adam Fahmi K</span> on 13 April 2016</div>
+	 	<div class="posttext"><p><b>LEICESTER</b> - Kemenangan 1-0 melawan Southampton di King Power Stadium, Minggu (3/4/2016), membuat peluang Leicester City tampil sebagai.</p></div>
+	 	</div>
+	 </div>
+	 <div class="post">
+	 	<div class="thumb"><a href="article4.html"><img src="img/2.jpg"/></a></div>
+	 	<div class="rightside">
+	 	<div class="postitle"><a href="article4.html">Highlight Bhayangkara Cup : Sriwijaya FC vs PBFC</a></div>
+	 	<div class="author">By <span style="color: blue">Adam Fahmi K</span> on 13 April 2016</div>
+	 	<div class="posttext"><p><b>BANDUNG</b> - Sriwijaya FC sukses menaklukkan Pusamania Borneo FC dengan skor 3-1 di laga kedua Piala Bhayangkara. Kemenangan itu membuat</p></div>
+	 	</div>
+	 </div>
+	 <div class="post">
+	 	<div class="thumb"><a href="article5.html"><img src="img/3.jpg"/></a></div>
+	 	<div class="rightside">
+	 	<div class="postitle"><a href="article5.html">Drawing Quarter Final 2015/2016</a></div>
+	 	<div class="author">By <span style="color: blue">Adam Fahmi K</span> on 13 April 2016</div>
+	 	<div class="posttext"><p><b>NYON</b> - Undian babak perempat final Liga Champions 2015/2016 sudah selesai digelar. Salah satu yang menyedot perhatian adalah Barcelona</p></div>
+	 	</div>
+	 </div>
+	 <div class="post" style="border-bottom: none;">
+	 	<div class="thumb"><a href="article6.html"><img src="img/5.jpg"/></a></div>
+	 	<div class="rightside">
+	 	<div class="postitle"><a href="article6.html">Arema Butuh Tambahan Pemain U-21</a></div>
+	 	<div class="author">By <span style="color: blue">Adam Fahmi K</span> on 13 April 2016</div>
+	 	<div class="posttext"><p><b>KUTA</b> - Setelah melakoni laga perdana Piala Bhayangkara melawan Bali United (19/3/2016), pelatih Arema Cronus Milomir Seslija merasa butuh</p></div>
+	 	</div>
+	 </div>			
+	 </div>
+	 <!-- Widget Sidebar -->
+	 <div class="fif-n">
+	 <form action="FBN.html" method="GET" class="sform">
+	 <input class="sbox" type="text" placeholder="Search..." value="" autocomplete="off" data-ajax="false" required><input class="sbutton" type="submit" value=" "/>
+	 </form>
+	 <br>
+	 <div class="sub-d">
+	 <h3><span>Recent Posts</span></h3>
+		<ul>
+		<li><a target="_blank" href="article1.html" class="hesa"><img src="img/1.jpg" height="55px" width="100px"></img></a><a target="_blank" href="article1.html" class="hes">Preview FA Cup : Hull City vs Arsenal</a></li>
+		<li><a target="_blank" href="article2.html" class="hesa"><img src="img/conte.jpg" height="55px" width="100px"></img></a><a target="_blank" href="article2.html" class="hes">Conte Resmi ke Chelsea</a></li>
+		<li><a target="_blank" href="article3.html" class="hesa"><img src="img/ranieri.jpg" height="55px" width="100px"></img></a><a target="_blank" href="article3.html" class="hes">Leicester Semakin Kokoh di Puncak</a></li>
+		<li style="border-bottom: none;"><a target="_blank" href="article4.html" class="hesa"><img src="img/2.jpg" height="55px" width="100px"></img></a><a target="_blank" href="article4.html" class="hes">Highlight Bhayangkara Cup : Sriwijaya FC vs PBFC</a></li>
+		</ul>
+	</div>	
+	 <div class="sub-d">
+	 <h3><span>Popular Posts</span></h3>
+		<ul>
+		<li><a target="_blank" href="newslokalart4.html" class="hesa"><img src="img/jajang.jpg" height="55px" width="100px"></img></a><a target="_blank" href="newslokalart4.html" class="hes">Djanur Bawa Inter U-18 ke Final</a></li>
+		<li><a target="_blank" href="newsduniaart5.html" class="hesa"><img src="img/pjanic.jpg" height="55px" width="100px"></img></a><a target="_blank" href="newsduniaart5.html" class="hes">Pjanic Akan Ikut Conte ke Chelsea</a></li>
+		<li><a target="_blank" href="article5.html" class="hesa"><img src="img/3.jpg" height="55px" width="100px"></img></a><a target="_blank" href="article5.html" class="hes">Drawing Quarterfinal Liga Champions 2015/2016</a></li>
+		<li style="border-bottom: none;"><a target="_blank" href="newsduniaart4.html" class="hesa"><img src="img/barca.jpg" height="55px" width="100px"></img></a><a target="_blank" href="newsduniaart4.html" class="hes">Pakai Jersey Kedua Sua Atletico Madrid</a></li>
+		</ul>
+	 </div>	
+     </div>
+	 <div class="six-n">
+	 <!-- Footer -->
+	 <div class="ino">
+	 <footer>
+		<ul>
+			<li><a href="#">Klasemen</a></li>
+			<li><a href="#">Terms Of Services</a></li>
+			<li><a href="#" style="border-right: 1px solid #22a7f0;">Sitemap</a></li>
+		</ul>
+	 </footer>
+	 </div>
+	 <div class="sec-ino">
+	  <footer>
+		<p>&copy; 2016 AlamBola. Allright Reserved. Theme by Adam Fahmi K</p>
+	  </footer>
+	 </div>
+	</div>
+   </div>
+  </body>
+ </html> 
